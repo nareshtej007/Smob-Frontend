@@ -1,0 +1,55 @@
+<div class="QR-container">
+    <!--<div class="row" style="height:1.5cm">-->
+
+  
+    <h5 aign="left"><b>Shippment Form</b></h5>
+    <!-- </div>-->
+    <br/>
+    
+    <div class="row" style="height:2.0cm">
+
+        <div>
+            <div class="thisgroup-NR">
+                <b>Expected Delivery:</b>
+            </div>
+            <div class="group">
+                
+                 {{bootstrap-datepicker placeholder="Select Date" format="dd/mm/yyyy" class="form-control" value=mydate style="background: url('assets/images/forward.svg') no-repeat right center;"}}
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+
+        <div id="left">
+            <div class="thisgroup-NR">
+                <b> Shippment Start From:</b>
+            </div>
+            <div class="group" style="width:4cm;margin-top:1mm">
+                
+        {{select-component dropdowntype="test" listitem=citylist selecteditemlist=selectedsource}}
+            </div>
+        </div>
+
+        <div id="right" style="margin-left:-1cm;width:7cm" >
+            <div class="thisgroup-NR">
+                <b>Shippment End To:</b>
+            </div>
+            <br/>
+            <div class="group" style="width:4cm;margin-top:-4mm">
+               {{select-component dropdowntype="test" listitem=citylist selecteditemlist=selectedDestination}}
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+       
+            <div class="col-sm-3">
+     <button id="NR-button" type="submit" {{action 'cancel'}}>CANCEL</button>
+            </div>
+         <div class="col-sm-3">
+      <button id="NR-button" type="submit" {{action 'gotoshippment'}}>Shipped</button>
+        </div>
+    </div>
+</div>

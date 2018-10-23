@@ -1,0 +1,697 @@
+<br/>
+<br/>
+<br/>
+ <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jQuery-plugin-progressbar.js"></script>
+<div class="container">
+  <div class="timeline-head">Timeline</div>
+  <br/>
+  
+   <div class="line-3"></div>
+  
+  <br/>
+
+
+<div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-stepper-horizontal-alternative">
+      <div class="mdl-stepper-step active-step ">
+       <div class="mdl-stepper-circle1"></div>
+        <div class="mdl-stepper-title"></div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+     <div class="mdl-stepper-step active-step ">
+        <div class="mdl-stepper-title2">Requests</div>
+       <div class="mdl-stepper-circle"></div>
+         <div class="vl"></div>
+          <div class="circle" ><div id="request-details">Rejected {{RequestRejectedcpunt}}</div></div>
+          <div class="vl"></div>
+          <div class="circle"><div id="request-details">Accepted {{IsRequestAcceptedcount}}</div> </div>
+          
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+      </div>
+       
+       <div class="mdl-stepper-step active-step ">
+      <div class="upper-line">
+        
+          <div class="this-circle2"><div id="request-details">Received {{QuotationRaisedcount}}</div></div>
+          <div class="vl2"></div>
+          <div class="this-circle2"><div id="request-details">Accepted {{QuotationRejectedcount}}</div></div>
+          <div class="vl2"></div>
+         </div>
+        <div class="mdl-stepper-circle"></div>
+         <div class="mdl-stepper-title">Quotation</div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+       <div class="mdl-stepper-step active-step ">
+         <div class="mdl-stepper-title2" style="margin-left:20px">Purchase&nbsp;Order</div>
+         <div class="mdl-stepper-circle"></div>
+         <div class="po-style">
+         <div class="vl"></div>
+          <div class="circle"><div id="request-details">Accepted {{POraisedcount}}</div></div>
+         <!-- <div class="vl"></div>
+          <div class="circle"><div id="request-details">Delayed 152</div></div>-->
+         
+       </div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+       <div class="mdl-stepper-step active-step ">
+         <div class="upper-line2">
+         
+          <div class="this-circle3"><div id="request-details">Delayed {{Delayed}}</div></div>
+          <div class="vl2"></div>
+          <div class="this-circle3"><div id="request-details">Delivered {{DoDeliveredcount}}</div></div>
+          <div class="vl2"></div>
+         </div>
+        <div class="mdl-stepper-circle"></div>
+        <div class="mdl-stepper-title">Delivery&nbsp;Order</div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+      <div class="mdl-stepper-step active-step ">
+        <div class="mdl-stepper-title2">&nbsp;Invoice</div>
+        <div class="mdl-stepper-circle"></div>
+            <div class="io-style">
+              <div class="vl"></div>
+              <div class="circle"><div id="request-details">Raised {{InvoiceRaisedcount}}</div></div>
+              <div class="vl"></div>
+              <div class="circle"><div id="request-details">Approved {{InvoiceApprovedcount}}</div></div>
+         </div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+        <div class="mdl-stepper-step active-step ">
+          <div class="upper-line3">
+         
+          <div class="this-circle3"><div id="request-details">Iniaited {{isPaymentInitiatedCount}}</div></div>
+          <div class="vl2"></div>
+          <div class="this-circle3"><div id="request-details">Paid {{paymentPaidcount}}</div></div>
+          <div class="vl2"></div>
+         </div>
+        <div class="mdl-stepper-circle"></div>
+        <div class="mdl-stepper-title">Payments</div>
+        <div class="mdl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+      <div class="mdl-stepper-step active-step ">
+       <div class="mdl-stepper-circle2"></div>
+        <div class="mdl-stepper-title"></div>
+        <div class="dl-stepper-bar-left"></div>
+        <div class="mdl-stepper-bar-right"></div>
+      </div>
+      
+    </div>
+
+
+
+</div>
+</div>
+<br/>
+
+<div class="row" >
+  <div class="col-sm-4" style="height:410px;	width: 370px;	margin-left:100px;border-radius: 2px;	background-color: #FFFFFF;	box-shadow: 0 7px 16px 0 rgba(132,152,172,0.1);}">
+     <!-- <div id="container">
+		<div class="card chart-wrap bg ring">
+				<h3>Triple Ring Chart</h3>
+				<div class="chart">
+						<div class="ring-chart" data-progress="80">
+								<!--<div class="circle">
+										<div class="mask full">
+												<div class="fill bg"></div>
+										</div>
+										<div class="mask half">
+												<div class="fill bg"></div>
+												<div class="fill bg fix"></div>
+										<!--</div>
+								</div>
+								<div class="ring-fill bg"></div>
+						</div>
+						<div class="small ring-chart" data-progress="60">
+							
+										<div class="mask full">
+												<div class="fill bg"></div>
+										</div>
+										<div class="mask half">
+												<div class="fill bg"></div>
+												<div class="fill bg fix"></div>
+										</div>
+							
+								<div class="ring-fill bg"></div>
+						</div>
+						<div class="mini ring-chart" data-progress="40">
+							
+										<div class="mask full">
+												<div class="fill bg"></div>
+										</div>
+										<div class="mask half">
+												<div class="fill bg"></div>
+												<div class="fill bg fix"></div>
+										</div>
+							
+								<div class="ring-fill bg"></div>
+						</div>
+				</div>
+				
+		</div>
+      </div>-->
+{{!---{{#progress-circle size="100" strokeWidth="3" percentage=model.somePercentage}}
+ {{progress-circle size="50" strokeWidth="3" percentage="50" height="3cm"}}
+    
+  
+{{/progress-circle}}---}}
+<br/>
+<br/>
+  <p class="dashboard-middle-head-1"> <b>Requests Overview</b></p>
+<div class="line-8"></div>
+<!--<div class="progress-circle-1">
+ {{progress-circle size="230" strokeWidth="10" percentage="90"  }}
+<div class="progress-circle-2">
+ <span style="position:relative;margin-left:3mm;margin-top:8mm;margin-right:3mm;padding-top:1cm;">{{progress-circle size="190" strokeWidth="10" percentage="90" }}</span> 
+<div class="progress-circle-3">
+<span style="margin-left:3mm;margin-bottom:-8mm"><span style="position:relative;margin-left:5mm;margin-top:10mm;margin-right:5mm">{{progress-circle size="150" strokeWidth="10" percentage="90"}}</span> </span> 
+<div class="progress-circle-4">
+ <span style="position:relative;margin-left:3mm;margin-top:5mm;margin-right:3mm;padding-top:1cm" >{{progress-circle size="110" strokeWidth="10" percentage="90" }}</span> 
+ 
+</div>
+</div>
+</div>
+
+</div>-->
+<!--<ul>
+  {{#each (array 'foo' 'bar' 'baz') as |item|}}
+    <li>{{item}}</li>
+  {{/each}}
+</ul>-->
+
+<div class="progress-circle-1">
+<div class="zomg" >
+  {{svg-pie
+    data=(hash value=isShowOpenStatus color="#F5A623")
+    total=100
+    size="220"
+   strokeWidth="10"
+  }}
+</div>
+
+<style>
+  .zomg {
+    position: relative;
+    display:  table;
+    
+      background-size: 100%;
+          background-color: transparent;
+  }
+  .zomg:after {
+    content:       '';
+    position:      absolute;
+    top:           50%;
+    left:          50%;
+    width:         75%;
+    height:        75%;
+    transform:     translate(-50%, -50%);
+  /*  margin-top: 10px;*/
+    border-radius: 50%;
+    border-width:10%;
+   background: white;
+    background-size: 100%
+  }.zomg::before {
+    background-color: transparent;
+  }
+  .zomg svg {
+    display: block;
+      
+     background-size: 100%
+    
+  }
+</style>
+
+<div class="progress-circle-2">
+  <div class="zomg" >
+  {{svg-pie
+    data=(hash value=isShowOpenStatus color="#87D7FF")
+    total=100
+    size="150"
+   
+  }}
+</div>
+
+<style>
+  .zomg {
+    position: relative;
+    display:  table;
+      background-size: 100%;
+      background-color: transparent;
+  }
+  .zomg:after {
+    content:       '';
+    position:      absolute;
+    top:           50%;
+    left:          50%;
+    width:         75%;
+    height:        75%;
+    transform:     translate(-50%, -50%);
+  /*  margin-top: 10px;*/
+    border-radius: 50%;
+   background: white;
+    background-size: 100%
+  }
+  .zomg svg {
+    display: block;
+     background-size: 100%;
+     background-color: transparent;
+  }
+</style>
+
+<div class="progress-circle-3">
+ <div class="zomg" >
+  {{svg-pie
+    data=(hash value=70 color="#00AA77")
+    total=100
+    size="100"
+    }}
+</div>
+
+<style>
+  .zomg {
+    position: relative;
+    display:  table;
+      background-size: 100%
+  }
+  .zomg:after {
+    content:       '';
+    position:      absolute;
+    top:           50%;
+    left:          50%;
+    width:         75%;
+    height:        75%;
+    transform:     translate(-50%, -50%);
+  /*  margin-top: 10px;*/
+    border-radius: 50%;
+   background: white
+    
+  }
+  .zomg svg {
+    display: block;
+     background-size: 100%
+  }
+</style>
+ <div class="progress-circle-4">
+   <div class="zomg" >
+  {{svg-pie
+    data=(hash value=isShowCloseStatus color="#FCFF00")
+    total=100
+    size="65"
+   
+  }}
+</div>
+
+<style>
+  .zomg {
+    position: relative;
+    display:  table;
+
+  }
+  .zomg:after {
+    content:       '';
+    position:      absolute;
+    top:           50%;
+    left:          50%;
+    width:         75%;
+    height:        75%;
+    transform:     translate(-50%, -50%);
+  /*  margin-top: 10px;*/
+    border-radius: 50%;
+   /* background:    white;*/
+    background-size: 100%
+  }
+  .zomg svg {
+    display: block;
+     background-size: 100%
+  }
+</style>
+ </div>
+</div>
+
+</div>
+</div>
+
+<div class="lower-row-1">
+  <div class='is-grouped'>
+  <div class='is-grouped'>
+   
+      <div class='button'><button class="two-dash-btn-circle1-1"></button></div>
+        <div class='button'> &nbsp;Open</div>
+  </div>
+  <div class='is-grouped'>
+    
+      <div class='button'><button class="two-dash-btn-circle2-2"></button></div>
+       <div class='button' > On Process</div>
+    
+  </div>
+   <div class='is-grouped'>
+   
+      <div class='button'><button class="two-dash-btn-circle2-3"></button></div>
+         <div class='button'> Delayed</div>
+  </div>
+    <div class='is-grouped'>
+ 
+      <div class='button'><button class="two-dash-btn-circle2-4"></button></div>
+          <div class='button'>&nbsp; Completed</div>
+      </div>  
+
+</div>
+</div>
+
+<!--script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jQuery-plugin-progressbar.js"></script>
+<div class="progress-bar" data-percent="60" data-duration="1000" data-color="#ccc,yellow"></div>
+<div id="container"></div>
+<script>
+  var bar = new ProgressBar.Circle(container, {
+  strokeWidth: 6,
+  easing: 'easeInOut',
+  duration: 1400,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  svgStyle: null
+});
+
+bar.animate(1.0);
+</script>
+{{ember-progress-bar shape="Circle" progress=50 options=(hash strokeWidth=10 duration=1000)}}-->
+  </div>
+  <div class="col-sm-4" style="height:410px;	width: 370px;	margin-left:10px;border-radius: 2px;	background-color: #FFFFFF;	box-shadow: 0 7px 16px 0 rgba(132,152,172,0.1);}">
+<div class="middle-container">
+  <p class="dashboard-middle-head"> <b>Delivery Overvirew</b></p>
+<div class="line-6"></div>
+<br/>
+<div style="width: 200px;position:relative;">
+  <div style="position: absolute;
+top: 0;
+left: 0;
+height: 200px;
+width: 200px;
+border-radius: 50%;
+clip: auto;background: #68DC83;"><b style="color:#FFFFFF">this</b>
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+clip: rect(0px, 50px, 200px, 0px);"></div>
+  </div>
+  <div id="slice2" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(216deg);">
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+-webkit-transform: rotate({{dodelivredcntIndegree}}deg);
+clip: rect(0px, 100px, 100px, 0px);
+background-color: #FF923F;">{{dodelivredcntIndegree}}</div>
+  </div>
+  <div id="slice3" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(306deg);">
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background-color: #499EF6;
+-webkit-transform: rotate({{doraisedcntIndegree}}deg); 
+clip: rect(0px, 100px, 100px, 0px);">  </div>
+  </div>
+  <div id="slice4" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(342deg);">
+   
+  </div>
+  <div id="slice5" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(356.4deg);">
+    
+  </div>
+  <div style="position: absolute;
+border-radius: 50%;
+top: 50px;
+left: 50px;
+background:white;
+width: 100px;
+height: 100px;
+display: block;
+clip: auto;"> <p style="margin-top:20px;margin-left:3mm">{{total}} Delivery</p></div>
+</div>
+
+<div class="lower-row">
+  <div class='is-grouped'>
+  <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle1"></button></div>
+       <div class='button'> &nbsp;Shipped</div>
+  </div>
+  <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle2"></button></div>
+       <div class='button' >&nbsp; Delayed{{doraisedcntIndegree}}</div>
+  </div>
+   <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle3"></button></div>
+       <div class='button'>&nbsp; Delivered</div>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+ {{#if IsShowretailer}}
+  <div class="col-sm-4" style="height:410px;	width: 370px;	margin-left:10px;border-radius: 2px;	background-color: #FFFFFF;	box-shadow: 0 7px 16px 0 rgba(132,152,172,0.1);}">
+        <div class="heading-right">
+        Track Deliveries  &nbsp;&nbsp;&nbsp; <span style="color:#499EF6 ;float:right;margin-right:-5.5cm;margin-top:4mm"{{action 'toggleModal'}}>New Request <img src="assets/images/forward.svg" alt="Smiley face" width="15" height="9" style="margin-bottom:1px"></span> 
+      </div>
+      <br/>
+      <div class="line-5"></div>
+      {{#each tracking as |items|}}
+      <div class="dashboard-track">
+       <div id="head-dashboard-track">
+      {{items.materialtype}}
+       </div>
+       <p style="color: #536C89;font-family: Avenir;font-size: 13px;font-style: oblique;font-weight: 900;">  {{items.updatedby}} :<span style="font-weight: 300;color: #022351;font-size: 13px;"> {{items.companyname}}</span></p>
+      <p style="margin-top:-3mm;color: #677B92;	font-family: Avenir;	font-size: 12px;">Reached Thambaram will be delived on Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3B89F3;	font-family: Avenir;	font-size: 13px;	font-weight: 900;text-decoration: underline;"{{action 'gotoTracking' items.key}}>Track</span></p>
+      </div>
+      {{/each}}
+  </div>
+  {{/if}}
+  {{#if IsnotShowRetailer}}
+<div class="col-sm-4" style="height:410px;	width: 370px;	margin-left:10px;border-radius: 2px;	background-color: #FFFFFF;	box-shadow: 0 7px 16px 0 rgba(132,152,172,0.1);}">
+<div class="middle-container">
+  <p class="dashboard-middle-head"> <b>Inventory Overvirew</b></p>
+<div class="line-6"></div>
+<br/>
+<div style="width: 200px;position:relative;">
+  <div style="position: absolute;
+top: 0;
+left: 0;
+height: 200px;
+width: 200px;
+border-radius: 50%;
+clip: auto;background: #68DC83;">
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+clip: rect(0px, 50px, 200px, 0px);"></div>
+  </div>
+  <div id="slice2" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate({{invenAvaQty}}deg);">
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+-webkit-transform: rotate({{invenDepletedQty}}deg);
+clip: rect(0px, 100px, 100px, 0px);
+background-color: #FF923F;;"><b style="font-size:2mm;color:white">{{invenDepletedQty}}</b></div>
+  </div>
+  <div id="slice3" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(306deg);">
+    <div class="pie" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+background-color: #499EF6;
+-webkit-transform: rotate({{invenReqstQty}}deg);
+clip: rect(0px, 100px, 100px, 0px);"></div>
+  </div>
+  <div id="slice4" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate({{invenReqstQty}}deg);">
+   
+  </div>
+  <div id="slice5" style="position: absolute;
+top: 0;
+left: 0;
+width: 200px;
+height: 200px;
+clip: rect(0px, 200px, 200px, 100px);
+-webkit-transform: rotate(356.4deg);">
+    
+  </div>
+  <div style="position: absolute;
+border-radius: 50%;
+top: 50px;
+left: 50px;
+background:white;
+width: 100px;
+height: 100px;
+display: block;
+clip: auto;"><p style="margin-top:25px;margin-left:3mm">{{totalinventory}} <p>Material Types</p></p></div>
+</div>
+
+<div class="lower-row">
+  <div class='is-grouped'>
+  <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle1"></button> </div>
+      <div class='button' style="color: #72869C;	font-family: Avenir;"> &nbsp; Available</div>
+  </div>
+  <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle2"></button></div>
+       <div class='button' style="color: #72869C;	font-family: Avenir;">&nbsp; Depleted</div>
+  </div>
+
+   <div class='is-grouped'>
+      <div class='button'><button class="two-dash-btn-circle3"></button></div>
+        <div class='button' style="color: #72869C;	font-family: Avenir;">&nbsp; Requested</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+{{/if}}
+</div>
+<br/>
+{{#if IsnotShowRetailer}}
+<div class="last-container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="col-sm-6" id="left-part">
+        <p>Inventory</p>
+      </div>
+      
+      <div class="col-sm-6" style="background-color:white">
+         <span><input type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name"><img src="assets/images/search.svg" alt="Smiley face" width="22" height="22">  &nbsp;&nbsp;&nbsp; <span style="color:#499EF6 ;margin-left:1.5cm"{{action 'toggleModal'}}>New Request <img src="assets/images/forward.svg" alt="Smiley face" width="15" height="9" style="margin-bottom:1px"></span> </span>
+     </div>
+       <div class="line-4"></div>
+    <div class="in-left-part-table">
+      <table id="myTable-inventory">
+  <tr  id="myTable-inventory-th" >
+    <th>Item Name</th>
+    <th>Current Quantity</th>
+    <th>Reorder Quantity</th>
+   
+  </tr>
+  
+  {{#each mydetails as |item|}}
+  <tr id="myTable-inventory-td">
+    <td>{{item.itemname}}</td>
+    <td>{{item.cuquantity}}</td>
+    <td>{{item.requantity}}</td>
+    
+  </tr>
+  {{/each}}
+  
+</table>
+
+    </div>
+      </div>
+    <div class="col-sm-4" id="dashboard-right-container" style="border-radius: 2px;	background-color: #FFFFFF;	box-shadow: 0 7px 16px 0 rgba(132,152,172,0.1);}">
+      <div class="heading-right">
+        Track Deliveries
+      </div>
+      {{#each tracking as |items|}}
+      <div class="dashboard-track">
+       <div id="head-dashboard-track">
+      {{items.materialtype}}
+       </div>
+       <p style="color: #536C89;font-family: Avenir;font-size: 13px;font-style: oblique;font-weight: 900;">  {{items.updatedby}} :<span style="font-weight: 300;color: #022351;font-size: 13px;"> {{items.companyname}}</span></p>
+      <p style="margin-top:-3mm;color: #677B92;	font-family: Avenir;	font-size: 12px;">Reached Thambaram will be delived on Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3B89F3;	font-family: Avenir;	font-size: 13px;	font-weight: 900;text-decoration: underline;"{{action 'gotoTracking' "keydashboard" items.key}}>Track</span></p>
+      </div>
+      {{/each}}
+     
+    </div>
+  </div>
+</div>
+{{/if}}
+
+{{#if IsShowNewReqretailer}}
+
+{{/if}}
+
+
+
+
+
+
+
+{{#if isShowingModal}}
+{{#modal-dialog close="toggleModal"
+               targetAttachment="center"
+                  translucentOverlay=true}}
+                  
+                  {{partial 'newrequest'}}
+                
+{{/modal-dialog}}
+{{/if}}
+{{#if ShowingModalrequest}}
+{{#modal-dialog close="toggleModal"
+               targetAttachment="center"
+                  translucentOverlay=true}}
+        <div id="NR-reactangle-sucess">
+           <p style="margin-top:3mm;color:#68DC83"> New Request Created Sucessfully </p>
+           <button class="btn btn-info"{{action 'okbutton'}}>ok</button>
+       </div>   
+                
+{{/modal-dialog}}
+{{/if}}
+

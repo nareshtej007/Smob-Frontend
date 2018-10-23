@@ -1,0 +1,166 @@
+
+<br/>
+<br/>
+
+<div class="user-up-container">
+ {{#if thisShowManfacturer}}
+<div class="left-1" >
+  <br/>
+   <span style="margin-top:5mm">Request Received From Retailers</span> 
+</div>
+{{/if}}
+ {{#if thisShowSupplier}}
+<div class="left-1" >
+  <br/>
+   <span >Request Received From Manufacturer
+     </span> 
+</div>
+{{/if}}
+{{#if thisShowRetailer}}
+<div class="left-1" >
+  <br/>
+   <span style="margin-top:5mm">Request Send To Manufacturer</span> 
+</div>
+{{/if}}
+{{#if thisShowRemainAll}}
+<div class="left-1" >
+  <br/>
+   <span style="margin-top:5mm"> All Requests </span> 
+</div>
+{{/if}}
+<div style="margin-top:-1cm;margin-left:31cm">
+   <span ><div style="width:2cm"><input type="text" id="myInput"  placeholder="Search for ..." style="width:2cm;margin-left:-3cm"><img src="assets/images/search.svg" alt="Smiley face" width="35" height="35"></div></span>
+</div>
+</div>
+<div class="line-2"></div>
+<div class="userome-container">
+<table id="myTable">
+  <tr id="mytable-th"  style="background-color:white">
+    <th>Material Type</th>
+    <th>Request Id</th>
+    <th>Date</th>
+     <th>Quantity</th>
+     <th>Requested Delivery</th>
+      <th>shipping address</th>
+      <th>Status</th>
+  </tr>
+  {{#if thisShowManfacturer}}
+ {{#each showrecordRetails   as |item|}}
+  <tr id="mytable-td" style="background-color:white">
+   <td>{{item.myrecord.transactiondetails.materialtype}}</td>
+   
+    <td><a href=# {{action   'gotorequest'  "keyUserhome" item.key }}>{{item.key}}</a></td>
+   
+    <td>{{item.myrecord.transactiondetails.today}}</td>
+    <td>{{item.myrecord.transactiondetails.Quantity}}</td>
+    <td>{{item.myrecord.transactiondetails.expecteddelivery}}</td>
+    <td>{{item.myrecord.transactiondetails.address}}</td>
+  
+    <td><b>{{item.mystatus}}</b></td>
+  
+    
+  </tr>
+  {{/each}}
+  {{/if}}
+  {{#if thisShowSupplier}}
+  {{#each showrecord   as |item|}}
+  <tr id="mytable-td" style="background-color:white">
+   <td>{{item.myrecord.transactiondetails.materialtype}}</td>
+   
+    <td><a href=# {{action   'gotorequest'  "keyUserhome" item.key }}>{{item.key}}</a></td>
+   
+    <td>{{item.myrecord.transactiondetails.today}}</td>
+    <td>{{item.myrecord.transactiondetails.Quantity}}</td>
+    <td>{{item.myrecord.transactiondetails.expecteddelivery}}</td>
+    <td>{{item.myrecord.transactiondetails.address}}</td>
+  
+    <td><b>{{item.mystatus}}</b></td>
+  
+    
+  </tr>
+  {{/each}}
+  {{/if}}
+  {{#if thisShowRetailer}}
+  {{#each showrecordRetails   as |item|}}
+  <tr id="mytable-td" style="background-color:white">
+   <td>{{item.myrecord.transactiondetails.materialtype}}</td>
+   
+    <td><a href=# {{action   'gotorequest'  "keyUserhome" item.key }}>{{item.key}}</a></td>
+   
+    <td>{{item.myrecord.transactiondetails.today}}</td>
+    <td>{{item.myrecord.transactiondetails.Quantity}}</td>
+    <td>{{item.myrecord.transactiondetails.expecteddelivery}}</td>
+    <td>{{item.myrecord.transactiondetails.address}}</td>
+  
+    <td><b>{{item.mystatus}}</b></td>
+  
+    
+  </tr>
+  {{/each}}
+  {{/if}}
+
+  {{#if thisShowRemainAll}}
+  {{#each showrecordToAll   as |item|}}
+  <tr id="mytable-td" style="background-color:white">
+   <td>{{item.myrecord.transactiondetails.materialtype}}</td>
+   
+    <td><a href=# {{action   'gotorequest'  "keyUserhome" item.key }}>{{item.key}}</a></td>
+   
+    <td>{{item.myrecord.transactiondetails.today}}</td>
+    <td>{{item.myrecord.transactiondetails.Quantity}}</td>
+    <td>{{item.myrecord.transactiondetails.expecteddelivery}}</td>
+    <td>{{item.myrecord.transactiondetails.address}}</td>
+  
+    <td><b>{{item.mystatus}}</b></td>
+  
+    
+  </tr>
+  {{/each}}
+  {{/if}}
+</table>
+
+</div>
+  {{#if thisShowManfacturer}}
+  <div class="row" id="new-row-manfc">
+    <div class="left-2" >
+       <br/>
+        <span style="margin-left: 2cm;">Request Send To Supplier</span> 
+    </div>
+    <div style="margin-top:-1cm;margin-left:31cm">
+   <span><div style="width:2cm"><input type="text" id="myInput"  placeholder="Search for ..." style="width:2cm;margin-left:-3cm"><img src="assets/images/search.svg" alt="Smiley face" width="35" height="35"></div></span>
+</div>
+
+<!--<div class="line-2"></div>-->
+
+<div class="userome-container">
+<table id="myTable">
+  <tr id="mytable-th"  style="background-color:white">
+    <th>Material Type</th>
+    <th>Request Id</th>
+    <th>Date</th>
+     <th>Quantity</th>
+     <th>Requested Delivery</th>
+      <th>shipping address</th>
+      <th>Status</th>
+  </tr>
+  {{#each showrecord   as |item|}}
+  <tr id="mytable-td" style="background-color:white">
+   <td>{{item.myrecord.transactiondetails.materialtype}}</td>
+   
+    <td><a href=# {{action   'gotorequest'  "keyUserhome" item.key }}>{{item.key}}</a></td>
+   
+    <td>{{item.myrecord.transactiondetails.today}}</td>
+    <td>{{item.myrecord.transactiondetails.Quantity}}</td>
+    <td>{{item.myrecord.transactiondetails.expecteddelivery}}</td>
+    <td>{{item.myrecord.transactiondetails.address}}</td>
+  
+    <td><b>{{item.mystatus}}</b></td>
+  
+    
+  </tr>
+  {{/each}}
+</table>
+</div>
+  
+  </div>
+  {{/if}}

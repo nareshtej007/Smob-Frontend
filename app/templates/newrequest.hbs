@@ -1,0 +1,94 @@
+<div class="NR-container">
+    <!--<div class="row" style="height:1.5cm">-->
+
+  
+    <h5 aign="left"><b>New Material Request</b></h5>
+    <!-- </div>-->
+    <div class="row" style="height:1.5cm">
+        <div class="thisgroup-NR">
+            <b> Material Type:</b>
+        </div>
+        <div class="group" style="width:10cm">
+            {{select-component dropdowntype="test" listitem=testlist selecteditemlist=materialtype}}
+        </div>
+
+    </div>
+    <div class="row" >
+
+        <div id="left">
+            <div class="thisgroup-NR">
+                <b> Quantity:</b>
+            </div>
+            <div class="group" style="width:4cm;margin-top:-3mm">
+                {{validated-input type="text" model=this valuePath='Quantity' placeholder="Quantity" required=""}}
+
+            </div>
+        </div>
+
+        <div id="right" style="margin-left:-1cm;width:7cm" >
+            <div class="thisgroup-NR">
+                <b >Expected Delivery:</b>
+            </div>
+            <br/>
+            <div class="group" style="width:4cm:margin-top:-1cm">
+                {{bootstrap-datepicker placeholder="Select Date" format="dd/mm/yyyy" class="form-control" value=mydate style="background: url('assets/images/forward.svg') no-repeat right center;"}}
+            </div>
+
+        </div>
+    </div>
+<div class="row" style="height:2.0cm">
+        <div class="thisgroup-NR">
+            <b>Request To:</b>
+        </div>
+        <div class="group" style="width:10cm; margin-top: -5mm;">
+            {{validated-input type="text" model=this valuePath='requestto' placeholder="Enter company name" required=""}}
+        </div>
+
+    </div>
+    {{#if IsnotShowRetailer}}
+   <div class="row" style="height:2.0cm">
+        <div class="thisgroup-NR">
+            <b>Shipped From:</b>
+        </div>
+        <div class="group" style="width:10cm; margin-top: -5mm;">
+            {{validated-input type="text" model=this valuePath='companyname' placeholder="shipped from" required=""}}
+        </div>
+
+    </div>
+    {{/if}}
+    <div class="row" style="height:2.0cm">
+        <div class="thisgroup-NR">
+            <b>Shipping Address:</b>
+        </div>
+        <div class="group" style="width:10cm; margin-top: -5mm;">
+            {{validated-input type="text" model=this valuePath='address' placeholder="shipping address" required=""}}
+        </div>
+
+    </div> 
+    {{#if Notshow_fileupload}}
+    <div id="NR-reactangle">
+       
+      {{#pl-uploader  for="upload_file" runtimes="html5 flash silverlight" onfileadd="uploadDoc" as |queue|}}
+          <a id="upload_file" style="font-size:18px"> <p style="margin-top:3mm"> <img src="assets/images/upload.svg" alt="Smiley face" width="20" height="20" style="margin-bottom:3mm">&nbsp; Choose File to Upload</p></a>
+         {{/pl-uploader}}
+      
+    </div>
+     {{/if}}
+       
+       {{#if isShow_fileupload}}
+        <div id="NR-reactangle-ok">
+       <p style="color:#68DC83,margin-top:3mm"><b> File Uploaded Sucessfully !!!</b></p>
+         </div>
+       {{/if}}
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+       
+            <div class="col-sm-3">
+     <button id="NR-button" type="submit" {{action 'cancel'}}>CANCEL</button>
+            </div>
+         <div class="col-sm-3">
+      <button id="NR-button" type="submit" {{action 'submitrequest'}}>SEND</button>
+        </div>
+    </div>
+</div>
